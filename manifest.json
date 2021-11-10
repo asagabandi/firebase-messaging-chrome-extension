@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Sample Chrome Extension",
+	"version": "0.0.0.1",
+	"browser_action": {
+		"default_popup": "./popup.html",
+		"default_title": "Test Extension"
+	},
+	"background": {
+		"scripts": ["./background.js"],
+		"persistent": true
+	},
+	"permissions": [
+		"notifications",
+		"background"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.firebase.com https://*.firebaseio.com https://apis.google.com; object-src 'self'",
+	"gcm_sender_id": "103953800507"
+}
